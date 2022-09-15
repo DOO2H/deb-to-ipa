@@ -1,4 +1,4 @@
-name: Run
+name: Convent Deb to iPa
 
 on:
   workflow_dispatch:
@@ -20,8 +20,7 @@ jobs:
           mkdir -p ${{ github.workspace }}/ipa/Payload
           cp -R ${{ github.workspace }}/app/Applications/* ${{ github.workspace }}/ipa/Payload
           
-          cd ${{ github.workspace }}/ipa
-          zip -r ${{ github.workspace }}/App.ipa .
+          
 
       - name: Upload IPA
         uses: actions/upload-artifact@v3.1.0
